@@ -3,12 +3,12 @@ import { BrowserRouter, Route } from 'react-router-dom'
 import { MainContainer } from '../containers'
 
 const PrimaryLayout = () => (
-  <div className="primary-layout">
+  <div className='primary-layout'>
     <header>
-      BOXED IN
+      {'BOXED IN'}
     </header>
     <main>
-      <Route path="/" exact component={MainContainer} />
+      <Route path='/' exact={true} component={MainContainer} />
     </main>
   </div>
 )
