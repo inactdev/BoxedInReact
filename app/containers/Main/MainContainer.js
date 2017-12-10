@@ -1,8 +1,9 @@
 import React from 'react'
+import { ReactGrid } from 'components'
 
 class MainContainer extends React.Component {
   render () {
-    return <p>{'Boxed In !'}</p>
+    return <ReactGrid />
   }
 }
 
