@@ -1,22 +1,15 @@
 import React from 'react'
-import { BrowserRouter, Route } from 'react-router-dom'
-import { MainContainer } from 'containers'
-
-const PrimaryLayout = () => (
-  <div className='primary-layout'>
-    <header>
-      {'BOXED IN'}
-    </header>
-    <main>
-      <Route path='/' exact={true} component={MainContainer} />
-    </main>
-  </div>
-)
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import { HomeContainer, MainContainer } from 'containers'
 
 const routes = (
-  <BrowserRouter>
-    <PrimaryLayout />
-  </BrowserRouter>
+  <Router>
+    <MainContainer>
+      <Switch>
+        <Route exact={true} path='/' component={HomeContainer} />
+      </Switch>
+    </MainContainer>
+  </Router>
 )
 
 export default routes
