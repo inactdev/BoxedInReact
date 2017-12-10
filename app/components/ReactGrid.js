@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import ReactGridLayout, { Responsive, WidthProvider } from 'react-grid-layout'
+import { Responsive, WidthProvider } from 'react-grid-layout'
 import '../../node_modules/react-grid-layout/css/styles.css'
 import '../../node_modules/react-resizable/css/styles.css'
 
@@ -33,20 +33,19 @@ const divBuilder = () => {
 
 // var height = width * 1/cols;
 
-const layout = [].concat.apply([], layoutBuilder());
-const divLayout = [].concat.apply([], divBuilder());
+const layout = [].concat.apply([], layoutBuilder())
+const divLayout = [].concat.apply([], divBuilder())
 
-
-class ReactGrid extends Component{
+class ReactGrid extends Component {
   constructor (props) {
-    super(props);
+    super(props)
     this.state = {
       rowHeight: 0
-    };
+    }
   }
 
   handleWidthChange = (windowWidth) => {
-    this.setState({rowHeight: windowWidth/15})
+    this.setState({rowHeight: windowWidth / 15})
   }
 
   render () {
@@ -60,7 +59,7 @@ class ReactGrid extends Component{
 
     return (
       <ResponsiveReactGridLayout
-        className="layout"
+        className='layout'
         layouts={layouts}
         breakpoints={{lg: 1200, md: 996, sm: 768, xs: 480, xxs: 0}}
         cols={{lg: 10, md: 10, sm: 10, xs: 10, xxs: 10}}
