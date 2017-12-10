@@ -1,0 +1,22 @@
+.container {
+  composes: centeredContainer from 'sharedStyles/styles.css';
+}
+
+.title {
+  composes: largeHeader from 'sharedStyles/styles.css';
+}
+
+.slogan {
+  composes: subHeader from 'sharedStyles/styles.css';
+}
+
+/*color: #3c3c3c;
+color: #fbfbfb;
+color: #3498db;
+color: #30aed6;
+color: #FF5252;
+color: #2ecc71
+color: #0493bd;
+color: #ecf0f1;
+color: #FF5252;
+color: #e74c3c;*/
