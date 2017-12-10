@@ -11,7 +11,7 @@ const ActionLinks = ({isAuthed}) => {
     </ul>
     : <ul>
       <li>{'SIGN IN COMPONENT'}</li>
-      <li><Link className={link} to='/auth'>{'Sign Up'}</Link></li>
+      <li><Link className={link} to='/sign_up'>{'Sign Up'}</Link></li>
     </ul>
 }
 

@@ -6,7 +6,7 @@ html, body {
   height: 100%;
   width: 100%;
   font-family: Montserrat, serif;
-  color: black;
+  color: #0493bd;
 }
 
 .centeredContainer {
@@ -24,11 +24,17 @@ html, body {
 }
 
 .subHeader {
-  color: #e74c3c;
+  color: #2ecc71;
   font-size: 35px;
   text-align: center;
   line-height: 55px;
   font-weight: 100;
+}
+
+.errorMsg {
+  color: #FF5252;
+  font-size: 22px;
+  text-align: center;
 }
 
 /*color: #3c3c3c;
@@ -39,5 +45,4 @@ color: #FF5252;
 color: #2ecc71
 color: #0493bd;
 color: #ecf0f1;
-color: #FF5252;
 color: #e74c3c;*/
