@@ -1,3 +1,5 @@
+import auth from 'helpers/auth'
+
 // Users
 const AUTH_USER = 'AUTH_USER'
 const UNAUTH_USER = 'UNAUTH_USER'
@@ -37,6 +39,19 @@ export function fetchingUserSuccess (uid, user, timestamp) {
     uid,
     user,
     timestamp
+  }
+}
+
+export function fetchAndHandleAuthedUser () {
+  return (dispatch) => {
+    dispatch(fetchingUser())
+    auth().then((user) => {
+      dispatch(fetchingUserSuccess(user.uid, user, Date.now()))
+      dispatch(authUser(user.uid))
+    })
+      .catch((error) => {
+        dispatch(fetchingUserError(error))
+      })
   }
 }
 
