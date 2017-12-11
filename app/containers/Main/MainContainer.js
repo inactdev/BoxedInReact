@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
+import { withRouter } from 'react-router'
 import { Navigation } from 'components'
 import { container, innerContainer } from './styles.css'
 
@@ -17,9 +18,11 @@ class MainContainer extends Component {
   }
 }
 
-export default connect(
+export default withRouter(connect(
   (state) => ({isAuthed: state.isAuthed})
-)(MainContainer)
+)(MainContainer))
+
+// export default withRouter(connect(mapStateToProps, mapDispatchToProps)(SignUpContainer))
 
 MainContainer.propTypes = {
   children: PropTypes.object,

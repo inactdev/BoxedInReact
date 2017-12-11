@@ -1,7 +1,7 @@
 import React from 'react'
 import { container, title, slogan } from './styles.css'
 
-export default function Home (props) {
+export default function Home () {
   return (
     <div className={container}>
       <p className={title}>{'BOXED IN'}</p>

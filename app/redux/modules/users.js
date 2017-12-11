@@ -1,4 +1,4 @@
-import auth from 'helpers/auth'
+import auth, { signout } from 'helpers/auth'
 
 // Users
 const AUTH_USER = 'AUTH_USER'
@@ -45,13 +45,20 @@ export function fetchingUserSuccess (uid, user, timestamp) {
 export function fetchAndHandleAuthedUser () {
   return (dispatch) => {
     dispatch(fetchingUser())
-    auth().then((user) => {
+    return auth().then((user) => {
       dispatch(fetchingUserSuccess(user.uid, user, Date.now()))
       dispatch(authUser(user.uid))
     })
       .catch((error) => {
         dispatch(fetchingUserError(error))
       })
+  }
+}
+
+export function signoutAndUnAuthUser () {
+  return function (dispatch) {
+    signout()
+    dispatch(unauthUser())
   }
 }
 
